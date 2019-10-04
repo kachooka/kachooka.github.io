@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Tìm hiểu về UNIX và LinuxGiới thiệu sơ lượcUNIX là một HĐH đa nhiệm, đa người dùng được phát triển vào năm 1969 bởi một nhóm nhân viên của công ty AT&amp;amp;T tại phòng thí nghiệm Bell Labs. Qua nhiều nă">
+<meta name="keywords" content="unix, linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UNIX &amp; Linux">
+<meta property="og:url" content="https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/index.html">
+<meta property="og:site_name" content="KachooKa">
+<meta property="og:description" content="Tìm hiểu về UNIX và LinuxGiới thiệu sơ lượcUNIX là một HĐH đa nhiệm, đa người dùng được phát triển vào năm 1969 bởi một nhóm nhân viên của công ty AT&amp;amp;T tại phòng thí nghiệm Bell Labs. Qua nhiều nă">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-04T05:56:56.284Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UNIX &amp; Linux">
+<meta name="twitter:description" content="Tìm hiểu về UNIX và LinuxGiới thiệu sơ lượcUNIX là một HĐH đa nhiệm, đa người dùng được phát triển vào năm 1969 bởi một nhóm nhân viên của công ty AT&amp;amp;T tại phòng thí nghiệm Bell Labs. Qua nhiều nă">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>UNIX &amp; Linux</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/09/04/Hallo-Welt/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&text=UNIX &amp; Linux"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&is_video=false&description=UNIX &amp; Linux"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=UNIX &amp; Linux&body=Check out this article: https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&name=UNIX &amp; Linux&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tim-hieu-ve-UNIX-va-Linux"><span class="toc-number">1.</span> <span class="toc-text">Tìm hiểu về UNIX và Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gioi-thieu-so-luoc"><span class="toc-number">1.0.1.</span> <span class="toc-text">Giới thiệu sơ lược</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Khac-biet-ve-ky-thuat"><span class="toc-number">1.0.2.</span> <span class="toc-text">Khác biệt về kỹ thuật</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kien-truc-phan-cung"><span class="toc-number">1.0.3.</span> <span class="toc-text">Kiến trúc phần cứng</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nhan-HDH-kernel"><span class="toc-number">1.0.4.</span> <span class="toc-text">Nhân HĐH (kernel)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tinh-mo"><span class="toc-number">1.0.5.</span> <span class="toc-text">Tính mở</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Open-Group-va-Single-UNIX-Specification"><span class="toc-number">1.0.6.</span> <span class="toc-text">The Open Group và Single UNIX Specification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Du-an-GNU-va-giay-phep-GPL"><span class="toc-number">1.0.7.</span> <span class="toc-text">Dự án GNU và giấy phép GPL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tong-ket"><span class="toc-number">1.1.</span> <span class="toc-text">Tổng kết</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Source"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">Source:</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        UNIX &amp; Linux
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">KachooKa</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-10-04T05:46:02.000Z" itemprop="datePublished">2019-10-04</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/unix-linux/">unix, linux</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Tim-hieu-ve-UNIX-va-Linux"><a href="#Tim-hieu-ve-UNIX-va-Linux" class="headerlink" title="Tìm hiểu về UNIX và Linux"></a>Tìm hiểu về UNIX và Linux</h1><h3 id="Gioi-thieu-so-luoc"><a href="#Gioi-thieu-so-luoc" class="headerlink" title="Giới thiệu sơ lược"></a>Giới thiệu sơ lược</h3><p>UNIX là một HĐH đa nhiệm, đa người dùng được phát triển vào năm 1969 bởi một nhóm nhân viên của công ty AT&amp;T tại phòng thí nghiệm Bell Labs. Qua nhiều năm, nó đã được phát triển thành nhiều phiên bản sử dụng trên nhiều môi trường phần cứng khác nhau. Hầu hết các phiên bản UNIX hiện nay đều là những biến thể của UNIX gốc và được các nhà phát triển sửa đổi, viết lại hoặc thêm các tính năng, công nghệ riêng biệt. Các phiên bản UNIX hiện nay có thể kể đến:</p>
+<ul>
+<li>HP-UX (HP)</li>
+<li>AIX (IBM)</li>
+<li>Solaris (Sun/Oracle)</li>
+<li>Mac OS X (Apple)</li>
+</ul>
+<p>Linux là HĐH được phát triển bởi Linus Torvarlds tại trường đại học Helsinki (Phần Lan) vào năm 1991. Linux được tạo ra với mục đích cung cấp cho người dùng 1 giải pháp phần mềm miễn phí thay thế cho UNIX. Linux có thể chạy trên rất nhiều nền tảng khác nhau như x86 và x64 từ Intel/AMD trong khi UNIX chỉ chạy trên 1 hoặc 2 kiến trúc nhất định.</p>
+<h3 id="Khac-biet-ve-ky-thuat"><a href="#Khac-biet-ve-ky-thuat" class="headerlink" title="Khác biệt về kỹ thuật"></a>Khác biệt về kỹ thuật</h3><p>Các hãng phát triển UNIX thường thường có những đối tượng khách hàng và nền tảng nhất định, và các phiên bản UNIX đều là HĐH thương mại và đươc bán với giá ko hề rẻ chút nào. Những HĐH này thường được phát triển có mục đích, có các tiêu chuẩn cho khách hàng và thống nhất giữa các phiên bản. Khi một phiên bản UNIX mới được nâng cấp, khách hàng sẽ nhận được những thông tin chi tiết từ nhà phát triển về các tính năng, công nghệ mới được áp dụng, tính tương thích đối với các bản cũ hơn, v.v…</p>
+<p>Trong khi đó, Linux được phát triển bởi nhiều lập trình viên với nhiều bối cảnh khác nhau, và vì thế họ có những ý kiến, quan điểm và mục tiêu khác nhau. Trong cộng đồng Linux ko hề có một tiêu chuẩn chính xác nào về môi trường, công cụ lập trình cũng như khả năng đáp ứng của HĐH.</p>
+<h3 id="Kien-truc-phan-cung"><a href="#Kien-truc-phan-cung" class="headerlink" title="Kiến trúc phần cứng"></a>Kiến trúc phần cứng</h3><p>Hầu hết các HĐH UNIX đều được lập trình để chạy trên một hoặc một nhóm kiến trúc phần cứng nhất định ví dụ HP-UX chạy trên hệ thống PA-RISC và Itanium, Solaris chạy trên SPARC và x86,… Việc giới hạn phần cứng giúp những công ty bán UNIX có thể tối ưu HĐH của mình để chạy thật tốt trên một hệ thống phần cứng nào đó.</p>
+<p>Trái lại, vốn được thiết kế với mục đích cạnh tranh và thay thế UNIX nên Linux có thể chạy trên rất nhiều cấu trúc phần cứng, và số lượng các thiết bị gắn ngoài, thiết bị I/O được sử dụng hầu như ko giới hạn. Chính vì thế mà nhà phát triển Linux ko thể xác định người dùng sử dụng loại phần cứng nào nên không thể tối ưu HĐH cho phần cứng đó.</p>
+<h3 id="Nhan-HDH-kernel"><a href="#Nhan-HDH-kernel" class="headerlink" title="Nhân HĐH (kernel)"></a>Nhân HĐH (kernel)</h3><p>Kernel là cốt lõi của mọi HĐH. Đối với các bản thương mại của UNIX, mã nguồn đều ko được phân phối tự do, và các hãng sản xuất UNIX thường cung cấp kernel dưới dạng nhị phân hay các gói “nguyên khối” (monolithic package), và những người khác chỉ có thể nâng cấp, chỉnh sửa một phần nhỏ.</p>
+<p>Đối với Linux, việc biên tập, vá lỗi kernel và driver dễ dàng hơn. Các bản vá lỗi được cung cấp dưới dạng mã nguồn và người dùng có thể tự do cài đặt, thậm chí chỉnh sửa nếu muốn. Các bản vá này thường ko được kiểm tra kỹ bằng UNIX. Và với các lập trình viên Linux, họ ko có thông tin đầy đủ về các môi trường và ứng dụng cần được kiểm tra, thử nghiệm, họ chỉ có thể dựa vào đánh giá của người dùng và các nhà phát triển khác để tìm lỗi.</p>
+<p>Đa số các hãng phát triển UNIX thường viết lại nhân HĐH để phục vụ cho mục đích của mình. Ví dụ HĐH Mac OS X của hãng Apple có nhân là Darwin, được viết lại từ nền tảng BSD. Vì thế, các HĐH này được gọi là các phiên bản hay biến thể của UNIX.</p>
+<p>Trong khi đó, các nhà phát triển Linux thường sử dụng chính nhân Linux trên HĐH của mình. Kernel của các HĐH như Fedora, Ubuntu, OpenSUSE,… đều gọi là Linux mặc dù chúng ko phải do Linus Torvalds phát triển. Do đó chúng ko được xem là các phiên bản khác nhau của Linux mà chỉ là các bản phân phối.</p>
+<blockquote>
+<p>bachkhois đã nói:</p>
+<ol>
+<li>Bản chất Linux ko phải là Unix. Linux chỉ cố gắng tương thích về “interface” với Unix, cụ thể là chuẩn POSIX (“Portable Operating System Interface for Unix”), tức là Linux sẽ “khớp” với Unix về “bề mặt” tương tự như 2 bánh răng khác nhau về đường kính mà vẫn ăn khớp được với nhau vậy. Chú ý là mã nguồn Linux hoàn toàn độc lập với Unix (như là cái bánh răng bằng thép và cái bánh răng bằng đá vậy).</li>
+<li>Ko thể nói “Unix là nhân, Linux là HĐH thực sự” được, vì thực tế lại ngược lại. Nếu đọc nhiều bạn sẽ thấy người ta hay nói đến “Linux kernel” chứ hiếm khi nói “Unix kernel”. Thậm chí trang web chứa mã nguồn Linux còn có tên là <a href="http://www.kernel.org" target="_blank" rel="noopener">www.kernel.org</a> mà.<br>Trong khi Unix được cung cấp cho doanh nghiệp với đầy đủ mọi thứ để đc triển khai &amp; sửa đổi trong nội bộ doanh nghiệp thì Linux đc phát hành chỉ dưới dạng kernel, ko có trình biên dịch (biên dich bằng gcc của GNU project), không có hệ vỏ (shell) - bởi vậy nên mới tồn tại nhiều shell khác nhau: sh, bash, csh, ksh, không có bootloader (nên phải xài bootloader riêng ở ngoài nhu GRUB, LILO, syslinux), không có môi trường desktop (nên phải xài đồ ngoài như GNOME, KDE…), không có hệ thống khởi dậy tiến trình ban đầu (mà phải dùng init, upstart, systemd là những cái ngoài)…<br>Khi lấy cái Linux kernel, gộp chung với mấy thứ “dùng ngoài” kia nữa thì ta có các bản phân phối Linux như Ubuntu, Fedora, ArchLinux v.v…</li>
+</ol>
+</blockquote>
+<h3 id="Tinh-mo"><a href="#Tinh-mo" class="headerlink" title="Tính mở"></a>Tính mở</h3><p>UNIX là 1 HĐH đóng. Có lẽ trái với quan điểm của 1 số người, cho rằng Linux mở thì UNIX cũng là mở, nhưng thực ra nó là nguồn đóng. Và câu hỏi đặt ra là: Nếu UNIX là nguồn đóng thì tại sao nhiều hãng lại có mã nguồn để phát triển riêng? Câu trả lời có lẽ khiến bạn càng bất ngờ. Ban đầu, UNIX được phân phối cho các trường đại học và những doanh nghiệp có nhu cầu, với đầy đủ mọi thứ từ mã nguồn đến các công cụ lập trình. Nói cách khác, nếu UNIX là 1 chiếc xe thì khách hàng được cung cấp mọi thứ từ bản vẽ đến từng cái tua vít. Cũng chính vì thế mà các trường học và công ty có thể chỉnh sửa, thậm chí viết lại cả HĐH.</p>
+<p>Linux mặt khác là 1 HĐH mã nguồn mở, người ta có thể tải, sử dụng, chỉnh sửa miển phí mà ko gặp trở ngại về luật bản quyền.</p>
+<h3 id="The-Open-Group-va-Single-UNIX-Specification"><a href="#The-Open-Group-va-Single-UNIX-Specification" class="headerlink" title="The Open Group và Single UNIX Specification"></a>The Open Group và Single UNIX Specification</h3><p>Có lẽ bạn cảm thấy khó hiểu khi các phiên bản của UNIX hầu hết là nguồn đóng nhưng chúng lại được gọi chung là UNIX. Vậy cái tên UNIX là mở hay sao? Nếu nghĩ vậy thì bạn đã lầm. UNIX là một cái tên được đăng ký thương hiệu và được sở hữu bởi một tổ chức tài chính Mỹ gọi là Open Group.</p>
+<p>Open Group đưa ra 1 tiêu chuẩn cho các HĐH máy tính gọi là Single UNIX Specification (SUS), và những HĐH nào đạt được các yêu cầu của SUS thì mới được gọi là UNIX, ko cần biết nó được xây dựng dựa trên cái gì (HĐH Mac OS X được phát triển dựa trên nền tảng BSD, vốn ko thoả mãn SUS, nhưng nó được viết lại và đạt yêu cầu nên được phép mang thương hiệu UNIX). Ngoài ra, những HĐH khác ko thoả mãn SUS sẽ ko được mang thương hiệu UNIX và ko được gọi là UNIX-based mà được gọi là UNIX-like (giống UNIX), điển hình là BSD, FreeBSD.</p>
+<p>Linux được Linus Torvalds viết trên 1 chiếc máy chạy HĐH MINIX, sau đó, nó được phát triển ngày càng hoàn thiện và có thể chạy độc lập với MINIX. Mà MINIX vốn chỉ là HĐH UNIX-like, nên có thể thấy quan hệ bà con giữa UNIX và Linux hơi bị xa chứ ko gần như chúng ta tưởng.</p>
+<h3 id="Du-an-GNU-va-giay-phep-GPL"><a href="#Du-an-GNU-va-giay-phep-GPL" class="headerlink" title="Dự án GNU và giấy phép GPL"></a>Dự án GNU và giấy phép GPL</h3><p>GNU là chữ viết tắt của GNU’s not UNIX (bên trong lại có GNU, bó tay, chả biết GNU kia là gì). Đây là một dự án do Richard Stallman khởi xướng vào năm 1983 với mục đích tạo ra 1 hệ thống phần mềm có thể cạnh tranh và thay thế phần mềm UNIX. Stallman cũng cho ban hành giấy phép GNU General Public License (GNU GPL). Giấy phép này yêu cầu nhà phân phối phần mềm phải kèm theo mã nguồn của phần mềm đó (mã nguồn mở), và mã nguồn Linux được phân phối tự do cũng là vì lý do này.</p>
+<h2 id="Tong-ket"><a href="#Tong-ket" class="headerlink" title="Tổng kết"></a>Tổng kết</h2><p>UNIX và Linux về cơ bản cũng ko khác nhau nhiều lắm, việc một nhà phát triển hay một doanh nghiệp muốn chuyển hệ thống máy tính của họ từ UNIX sang Linux cũng không quá khó khăn. Nhưng dù sao 2 người trông giống nhau ko có nghĩa họ là bà con với nhau. Linux và UNIX ko phải anh em mà còn là kẻ thù, ít nhất là về quan điểm của Linus Torvalds và dự án GNU.</p>
+<h4 id="Source"><a href="#Source" class="headerlink" title="Source:"></a>Source:</h4><ul>
+<li><a href="https://www.ibm.com/developerworks/aix/library/au-unix-difflinux.html" target="_blank" rel="noopener">Differentiating UNIX and Linux</a></li>
+<li><a href="https://tinhte.vn/threads/phan-biet-giua-unix-va-linux.816063/" target="_blank" rel="noopener">Phân biệt giữa UNIX và Linux</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Tim-hieu-ve-UNIX-va-Linux"><span class="toc-number">1.</span> <span class="toc-text">Tìm hiểu về UNIX và Linux</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Gioi-thieu-so-luoc"><span class="toc-number">1.0.1.</span> <span class="toc-text">Giới thiệu sơ lược</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Khac-biet-ve-ky-thuat"><span class="toc-number">1.0.2.</span> <span class="toc-text">Khác biệt về kỹ thuật</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kien-truc-phan-cung"><span class="toc-number">1.0.3.</span> <span class="toc-text">Kiến trúc phần cứng</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nhan-HDH-kernel"><span class="toc-number">1.0.4.</span> <span class="toc-text">Nhân HĐH (kernel)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tinh-mo"><span class="toc-number">1.0.5.</span> <span class="toc-text">Tính mở</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-Open-Group-va-Single-UNIX-Specification"><span class="toc-number">1.0.6.</span> <span class="toc-text">The Open Group và Single UNIX Specification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Du-an-GNU-va-giay-phep-GPL"><span class="toc-number">1.0.7.</span> <span class="toc-text">Dự án GNU và giấy phép GPL</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tong-ket"><span class="toc-number">1.1.</span> <span class="toc-text">Tổng kết</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Source"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">Source:</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&text=UNIX &amp; Linux"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&is_video=false&description=UNIX &amp; Linux"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=UNIX &amp; Linux&body=Check out this article: https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&title=UNIX &amp; Linux"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://kachooka.github.io/2019/10/04/Differentiating-UNIX-and-Linux/&name=UNIX &amp; Linux&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Dat Le
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/projects_url">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
